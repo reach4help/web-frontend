@@ -9,10 +9,10 @@ module.exports = {
   keyWords: ['open', 'air', 'neighbourhood', 'assistance', 'helpful', 'engineering'],
   githubUsername: 'Helpful-Engineers',
   social: {
-    twitter: "/",
-    linkedin: "/",
-    github: "/",
-    email: "/"
+    // twitter: "/",
+    // linkedin: "/",
+    // github: "/",
+    // email: "/"
   },
   pathPrefix: '/neighbourhood-assistance-web',
   siteCover: '/images/cover.jpg',

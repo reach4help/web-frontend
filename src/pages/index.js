@@ -11,9 +11,6 @@ import RequestForm from '../components/request_form';
 
 class Home extends React.Component {
   render() {
-    if (siteConfig.googleAnalyticsId === 'UA-000000000-1') {
-      console.error('WARNING: Please set a proper googleAnalyticsId. See https://analytics.google.com for details.');
-    }
     const { keywords } = siteConfig;
 
     return (
