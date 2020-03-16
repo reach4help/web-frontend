@@ -1,15 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Container, Row, Col } from 'react-awesome-styled-grid';
 import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter } from 'react-icons/fa';
-import siteConfig from '../../data/siteConfig';
+import { Col, Container, Row } from 'react-awesome-styled-grid';
 import Layout from '../components/layout';
-import Hero from '../components/hero';
 import SEO from '../components/SEO';
+import Hero from '../components/hero/hero';
 import Wrapper from '../components/wrapper';
-import RequestForm from '../components/request_form';
+import siteConfig from '../../data/siteConfig';
+import styled from 'styled-components';
 
-class Home extends React.Component {
+class Contribute extends React.Component {
   render() {
     if (siteConfig.googleAnalyticsId === 'UA-000000000-1') {
       console.error('WARNING: Please set a proper googleAnalyticsId. See https://analytics.google.com for details.');
@@ -19,25 +18,20 @@ class Home extends React.Component {
     return (
       <Layout location={this.props.location}>
         <SEO
-          title={siteConfig.siteTitle}
+          title={siteConfig.contributeSEOTitle}
           keywords={keywords}
         />
 
         <Hero
-          heroImg={siteConfig.siteCover}
-          title={siteConfig.homeTitle}
+          heroImg={siteConfig.contributeCover}
+          title={siteConfig.contributeTitle}
         />
 
         <Wrapper className={this.props.className}>
           <Container className="page-content" fluid>
             <Row>
               <Col xs={12}>
-                <h2>{siteConfig.formTitle}</h2>
-              </Col>
-            </Row>
-            <Row>
-              <Col xs={12}>
-                <RequestForm />
+                <h2>{siteConfig.contributeTitle}</h2>
               </Col>
             </Row>
             <Row>
@@ -69,7 +63,7 @@ class Home extends React.Component {
   }
 }
 
-export default styled(Home)`
+export default styled(Contribute)`
   .page-content {
     max-width: 100%;
     margin-bottom: 40px;

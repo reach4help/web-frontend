@@ -32,7 +32,7 @@ const HeaderNav = styled.nav`
 const HeaderLinkGroup = styled.div`
   display: flex;
   flex-direction: row;
-` 
+`
 
 const HeaderLink = styled(Link)`
   position: relative;
@@ -48,8 +48,14 @@ const HeaderLink = styled(Link)`
   min-width: 42px;
   z-index: 10;
 `
+
+const OtherPagesContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 const GithubLink = styled(({ className }) => (
-  <a 
+  <a
     className={className}
     href={`https://github.com/${siteConfig.githubUsername}`}
     target='_blank'
@@ -65,7 +71,28 @@ const GithubLink = styled(({ className }) => (
   border: 0;
   margin: 0;
   margin-right: 0.5rem;
-  padding-left: 20px;
+  //padding-left: 20px;
+  padding-right: 20px;
+  min-width: 42px;
+  z-index: 10;
+`
+
+const PageLink = styled(({ url, text, className }) => (
+  <a
+    className={className}
+    href={`/${url}`}
+  >
+    {text}
+  </a>
+))`
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  border: 0;
+  margin: 0;
+  margin-right: 0.5rem;
+  //padding-left: 20px;
   padding-right: 20px;
   min-width: 42px;
   z-index: 10;
@@ -85,7 +112,17 @@ class Header extends React.Component {
               </HeaderLink>
             ))}
           </HeaderLinkGroup>
-          <GithubLink />
+          <OtherPagesContainer>
+            <PageLink
+              url="about"
+              text="About"
+            />
+            <PageLink
+              url="contribute"
+              text="Contribute"
+            />
+            <GithubLink />
+          </OtherPagesContainer>
         </HeaderNav>
       </HeaderWrapper>
     )

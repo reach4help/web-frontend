@@ -4,7 +4,6 @@ module.exports = {
   siteMetadata: {
     title: config.siteTitle,
     description: config.siteDescription,
-    author: config.authorName,
     ...config
   },
   pathPrefix: config.pathPrefix,

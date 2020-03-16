@@ -1,12 +1,13 @@
 {
-  "name": "gatsby-starter-cv",
-  "private": true,
-  "description": "A simple starter to get up and developing your digital curriculum with GatsbyJS",
+  "name": "neighborhood-assistance-web",
+  "private": false,
+  "description": "Neighborhood assistance web client to feed the requests platform",
   "version": "0.0.1",
-  "author": "Francisco Santos <yoshi.df@gmail.com>",
+  "author": "David Alecrim, Luis Oliveira",
   "dependencies": {
     "babel-plugin-styled-components": "1.10.6",
-    "gatsby": "2.18.7",
+    "formik": "^2.1.4",
+    "gatsby": "^2.19.45",
     "gatsby-image": "2.2.34",
     "gatsby-plugin-google-analytics": "2.1.29",
     "gatsby-plugin-manifest": "2.2.31",
@@ -26,26 +27,31 @@
     "styled-components": "4.4.1"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "neighborhood",
+    "assistance",
+    "open",
+    "air",
+    "helpful",
+    "engineering"
   ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "gatsby build --prefix-paths",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "devDependencies": {
-    "gh-pages": "2.1.1",
     "prettier": "1.19.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/santosfrancisco/gatsby-starter-cv"
+    "url": "https://github.com/comoser/neighborhood-assistance-web"
   },
   "bugs": {
-    "url": "https://github.com/santosfrancisco/gatsby-starter-cv/issues"
+    "url": "https://github.com/comoser/neighborhood-assistance-web/issues"
   }
 }
